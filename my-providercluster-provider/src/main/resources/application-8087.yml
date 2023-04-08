@@ -1,0 +1,22 @@
+# 应用名称
+spring:
+  application:
+    name: my-providercluster-provider
+
+server:
+  port: 8087
+
+# 配置dubbo
+dubbo:
+  registry:
+    # 注册中心地址
+    address: zookeeper://192.168.3.188
+    port: 2181
+  scan:
+    base-packages: com.ghy.www.my.providercluster.provider.service # 扫包
+  protocol:
+    port: 20883 #服务提供者端口
+  provider:
+    host: 192.168.3.188
+  application:
+    logger: slf4j

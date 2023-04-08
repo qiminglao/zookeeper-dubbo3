@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: my-loadbalance-consumer-8091
+
+server:
+  port: 8091
+
+# 配置dubbo
+dubbo:
+  registry:
+    # 注册中心地址
+    address: zookeeper://192.168.3.188
+    port: 2181
+  application:
+    logger: slf4j

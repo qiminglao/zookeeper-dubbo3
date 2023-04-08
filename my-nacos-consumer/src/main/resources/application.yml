@@ -1,0 +1,22 @@
+# 应用名称
+spring:
+  application:
+    name: my-nacos-consumer
+
+server:
+  port: 8085
+
+# 配置dubbo
+dubbo:
+  registry:
+    # 注册中心地址
+    address: nacos://${nacos.host}:${nacos.port}/?username=${nacos.username}&password=${nacos.password}
+  application:
+    logger: slf4j
+
+# nacos信息
+nacos:
+  host: 192.168.3.188
+  port: 8848
+  username: nacos
+  password: nacos

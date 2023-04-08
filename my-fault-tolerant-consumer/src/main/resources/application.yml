@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: my-fault-tolerant-consumer
+
+server:
+  port: 8091
+
+# 配置dubbo
+dubbo:
+  registry:
+    # 注册中心地址
+    address: zookeeper://192.168.3.188
+    port: 2181
+  protocol:
+    name: dubbo
+  consumer:
+    forks: 3 # 配置cluster = ClusterRules.FORKING并发数量
+  application:
+    logger: slf4j

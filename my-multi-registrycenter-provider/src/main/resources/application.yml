@@ -1,0 +1,26 @@
+# 应用名称
+spring:
+  application:
+    name: my-multi-registrycenter-provider
+
+# 配置dubbo
+dubbo:
+  registries:
+    provider1:
+      address: zookeeper://192.168.3.188
+      port: 2181
+      timeout: 900000
+    provider2:
+      address: zookeeper://192.168.0.140
+      port: 2181
+      timeout: 900000
+    provider3:
+      address: zookeeper://192.168.0.62
+      port: 2181
+      timeout: 900000
+  scan:
+    base-packages: com.ghy.www.my.multi.registrycenter.provider.service # 扫包
+  provider:
+    host: 192.168.3.188
+  application:
+    logger: slf4j

@@ -1,0 +1,23 @@
+# 应用名称
+spring:
+  application:
+    name: my-loadbalance-provider-8086
+
+server:
+  port: 8086
+
+# 配置dubbo
+dubbo:
+  registry:
+    # 注册中心地址
+    address: zookeeper://192.168.3.188
+    port: 2181
+  scan:
+    base-packages: com.ghy.www.my.loadbalance.provider.service # 扫包
+  protocol:
+    port: 20882
+    threads: 1000
+  provider:
+    host: 192.168.3.188
+  application:
+    logger: slf4j

@@ -1,0 +1,20 @@
+# 应用名称
+spring:
+  application:
+    name: my-token-provider
+
+# 配置dubbo
+dubbo:
+  registry:
+    # 注册中心地址
+    address: zookeeper://192.168.3.188
+    port: 2181
+  scan:
+    base-packages: com.ghy.www.my.token.provider.service # 扫包
+  protocol:
+    port: 20881 # 服务消费者连接到此端口实现直连接
+  provider:
+    host: 192.168.3.188
+    token: true
+  application:
+    logger: slf4j
