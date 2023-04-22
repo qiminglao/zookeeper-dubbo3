@@ -7,7 +7,7 @@ spring:
 dubbo:
   registry:
     # 注册中心地址
-    address: zookeeper://192.168.3.188
+    address: zookeeper://127.0.0.1
     port: 2181
   scan:
     base-packages: com.ghy.www.my.zookeeper.provider.service # 扫包
@@ -15,6 +15,6 @@ dubbo:
     # 如果本机有多块网卡，明确服务提供者使用指定的IP地址，
     # 此IP地址会被注册到注册中心中，
     # 服务消费者根据此IP和服务提供者进行通讯
-    host: 192.168.3.188
+    host: 127.0.0.1
   application:
     logger: slf4j

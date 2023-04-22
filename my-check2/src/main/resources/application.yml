@@ -9,7 +9,7 @@ server:
 dubbo:
   registry:
     # 注册中心地址
-    address: zookeeper://192.168.3.188
+    address: zookeeper://127.0.0.1
     port: 2181
   application:
     logger: slf4j

@@ -7,13 +7,13 @@ spring:
 dubbo:
   registry:
     # 注册中心地址
-    address: zookeeper://192.168.3.188
+    address: zookeeper://127.0.0.1
     port: 2181
   scan:
     base-packages: com.ghy.www.my.direct.provider.service # 扫包
   protocol:
     port: 20898 # 服务消费者连接到此端口实现直连接
   provider:
-    host: 192.168.3.188
+    host: 127.0.0.1
   application:
     logger: slf4j
